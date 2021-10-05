@@ -39,6 +39,11 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 }
 
+.btn-article {
+    margin-left: auto;
+
+}
+
 .label {
     width: 100%;
 }

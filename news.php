@@ -24,6 +24,13 @@ require_once 'blocks/header.php';
         <div class="col-md-7 mb-3 mr-3">
             <div class="jumbotron">
                 <h1><?= $article->title ?></h1>
+                <?php
+                if ($_COOKIE['login'] == 'admin') :
+                    ?>
+                    <button type="button" class="btn btn-danger btn-article" id="<?=$article->id  ?>" >Удалить</button>
+                <?php
+                endif;
+                ?>              
                 <p><b>Автор статьи: </b>
                     <mark><?= $article->author ?></mark>
                 </p>
@@ -96,5 +103,23 @@ require_once 'blocks/header.php';
 
 
 <?php require_once 'blocks/footer.php'; ?>
+<script>
+
+    $('.btn-article').click(function () {
+        let id = this.id;
+        $.ajax({
+            url: '/ajax/delete_article.php',
+            type: 'POST',
+            cache: false,
+            data: {'id': id},
+            dataType: 'html',
+            success: function (data) {
+                //document.location.reload(true);
+                document.location.href = "index.php";
+            }
+        })
+    });
+
+</script>
 </body>
 </html>

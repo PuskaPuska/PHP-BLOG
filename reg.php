@@ -11,7 +11,7 @@ require_once 'blocks/header.php';
 <main role="main" class="container mt-5">
     <div class="row">
         <div class="col-md-8 mb-3">
-           <h4>Форма регистрации</h4>
+        <h4>Форма регистрации</h4>
             <form action="" method="post">
                 <label for="username">Ваше имя</label>
                 <input type="text" name="username" id="username" class="form-control" >

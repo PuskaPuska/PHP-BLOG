@@ -1,7 +1,7 @@
 <?php
 /*Подключение Базы Данных*/
-$user = 'root';
-$password = '';
+$user = 'admin';
+$password = '020899';
 $db = 'testing';
 $host = 'localhost';
 

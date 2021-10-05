@@ -23,8 +23,8 @@ require_once 'blocks/header.php';
                         <p class='text-justify'>$row->intro</p>  
                         <p>Автор статьи: $row->author</p>
                         <a href='/news.php?id=$row->id' title ='$row->title'>
-                         <button class='btn btn-warning'>Прочитать больше</button>
-                       </a>";
+                        <button class='btn btn-warning'>Прочитать больше</button>
+                    </a>";
             }
 
 
